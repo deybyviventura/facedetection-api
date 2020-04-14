@@ -8,14 +8,15 @@ const register = require("./controllers/register");
 const signin = require("./controllers/signin");
 const image = require("./controllers/image");
 
+// Database data connection
 const db = knex({
   client: "pg",
   connection: {
     host: "127.0.0.1",
     user: "postgres",
     password: "admin",
-    database: "facedetection"
-  }
+    database: "facedetection",
+  },
 });
 
 const app = express();
